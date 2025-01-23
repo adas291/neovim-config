@@ -1,6 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -79,5 +76,26 @@ return require('packer').startup(function(use)
   }
 
   use 'prettier/vim-prettier'
+  -- use 'lukas-reineke/indent-blankline.nvim'
+  use {
+    'nvimdev/indentmini.nvim',
+    config = function()
+      require('indentmini').setup()
+    end
+  }
+
+  use 'ThePrimeagen/harpoon'
+  use {
+    "folke/trouble.nvim",
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = "Trouble",
+    keys = { },
+    config = function()
+      require("trouble").setup {}
+    end,
+  }
+
+  -- use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
 
 end)

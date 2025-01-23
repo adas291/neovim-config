@@ -1,4 +1,5 @@
 require("adomas.remap")
+require("adomas.binds")
 
 vim.opt.guicursor = ""
 
@@ -35,4 +36,3 @@ vim.opt.smartcase = true
 --vim.api.nvim_set_keymap('n', '=', ':Prettier<CR>', { noremap = true, silent = true })
 -- Run Prettier on save for specific file types
 vim.api.nvim_set_keymap('n', '<C-S-i>', ':Prettier<CR>', { noremap = true, silent = true })
-
